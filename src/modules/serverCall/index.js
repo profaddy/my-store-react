@@ -2,7 +2,7 @@ import Auth from '../Auth'
 import jumpTo from '../Navigation'
 import axios from 'axios'
 import qs from 'qs'
-import paypalConfig from '../../configs/paypalConfig'
+// import paypalConfig from '../../configs/paypalConfig'
 
 const URL = 'https://zack-ecommerce-nodejs.herokuapp.com'
 // const URL = 'http://localhost:4000'
@@ -64,8 +64,8 @@ export const getPaypalToken = () => {
     url: 'https://api.sandbox.paypal.com/v1/oauth2/token',
     headers: { 'content-type': 'application/x-www-form-urlencoded' },
     auth: {
-      username: paypalConfig.username,
-      password: paypalConfig.password
+      username: "admin",
+      password: "admin"
     },
     data: qs.stringify({ "grant_type": "client_credentials" })
   })
